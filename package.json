@@ -1,0 +1,18 @@
+{
+  "name": "control-stock-perfumes",
+  "version": "1.0.0",
+  "description": "Sistema de conteo de stock de perfumes en tiempo real con SQLite y WebSockets",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1"
+  }
+}

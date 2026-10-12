@@ -1,0 +1,133 @@
+/* Estilos adicionales para Control de Stock - Perfumes */
+
+/* Ocultar barra de desplazamiento en pestañas móviles */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pestañas activas */
+.tab-btn {
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active[data-tab="isla"] {
+  border-color: #10b981;
+  color: #34d399;
+  background-color: rgba(16, 185, 129, 0.08);
+}
+
+.tab-btn.active[data-tab="deposito"] {
+  border-color: #3b82f6;
+  color: #60a5fa;
+  background-color: rgba(59, 130, 246, 0.08);
+}
+
+.tab-btn.active[data-tab="fallados"] {
+  border-color: #f43f5e;
+  color: #fb7185;
+  background-color: rgba(244, 63, 94, 0.08);
+}
+
+.tab-btn.active[data-tab="extras"] {
+  border-color: #a855f7;
+  color: #c084fc;
+  background-color: rgba(168, 85, 247, 0.08);
+}
+
+.tab-btn.active[data-tab="general"] {
+  border-color: #f59e0b;
+  color: #fbbf24;
+  background-color: rgba(245, 158, 11, 0.08);
+}
+
+/* Tarjetas de Perfumes */
+.perfume-card {
+  transition: transform 0.15s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.perfume-card:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+/* Botones táctiles grandes para el conteo */
+.btn-count-touch {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.btn-count-touch:active {
+  transform: scale(0.92);
+}
+
+/* Animación cuando cambia el contador */
+@keyframes pulse-count {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.count-updated {
+  animation: pulse-count 0.25s ease-out;
+}
+
+/* Animación cuando otro dispositivo actualiza un perfume en tiempo real */
+@keyframes remote-pulse {
+  0% { 
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    border-color: rgba(16, 185, 129, 1);
+  }
+  70% { 
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    border-color: rgba(16, 185, 129, 0.5);
+  }
+  100% { 
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    border-color: #1e293b;
+  }
+}
+
+.remote-updated {
+  animation: remote-pulse 1s ease-out;
+}
+
+/* Estilo para los inputs de cantidad directa */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Animación de Toast */
+.toast-show {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+/* Scrollbar estilizado general */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232d42;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #313e59;
+}

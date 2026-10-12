@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: control-stock-perfumes
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
